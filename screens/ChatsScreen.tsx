@@ -5,6 +5,7 @@ import EditScreenInfo from '../components/EditScreenInfo';
 import { View } from '../components/Themed';
 import ChatListItem from '../components/ChatListItem'
 import chatRooms from '../data/ChatRooms';
+import NewMessageButton from '../components/NewMessageButton';
 
 export default function ChatsScreen() {
     return (
@@ -12,10 +13,10 @@ export default function ChatsScreen() {
           <FlatList 
           style={{width: '100%'}}
           data={chatRooms}
-          renderItem={({ item }) => <ChatListItem chatRoom={item}
+          renderItem={({ item }) => <ChatListItem chatRoom={item}/>}
           keyExtractor={(item: { id: any; }) => item.id}
-          /> }
           />
+          <NewMessageButton/>
       </View>
     );
 }

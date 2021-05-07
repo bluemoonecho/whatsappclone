@@ -3,19 +3,19 @@ import { StyleSheet, FlatList  } from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { View } from '../components/Themed';
-import ChatListItem from '../components/ChatListItem'
-import chatRooms from '../data/ChatRooms';
+import ContactListItem from '../components/ContactsListItem'
+import users from '../data/Users';
 import NewMessageButton from '../components/NewMessageButton';
 
-export default function ChatsScreen() {
+export default function ContactsScreen() {
     return (
         <View style={styles.container}>
-            {/* <FlatList 
+            <FlatList 
             style={{width: '100%'}}
-            data={chatRooms}
-            renderItem={({ item }) => <ChatListItem chatRoom={item}/>}
+            data={users}
+            renderItem={({ item }) => <ContactListItem user={item}/>}
             keyExtractor={(item: { id: any; }) => item.id}
-            /> */}
+            />
             <NewMessageButton/>
         </View>
     );
@@ -24,8 +24,8 @@ export default function ChatsScreen() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
+        alignItems: 'flex-start',
+        justifyContent: 'flex-start',
     },
     title: {
         fontSize: 20,

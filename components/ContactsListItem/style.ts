@@ -6,12 +6,14 @@ const styles = StyleSheet.create({
         width: '90%',
         flex: 1,
         padding: 10,
+        alignContent: 'flex-start',
     },
     leftContainer: {
         flexDirection: 'row',
     },
     midContainer: {
         justifyContent: 'space-around',
+        
     },
     avatar: {
         width: 60,
@@ -23,15 +25,12 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 16,
     },
-    lastMessage: {
+    status: {
         fontSize: 16,
         color: 'gray',
         width: '100%',
     },
-    time: {
-        fontSize: 14,
-        color: 'gray',
-    }
+
 })
 
 export default styles;

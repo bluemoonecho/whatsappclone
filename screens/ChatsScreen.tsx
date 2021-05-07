@@ -13,7 +13,7 @@ export default function ChatsScreen() {
           style={{width: '100%'}}
           data={chatRooms}
           renderItem={({ item }) => <ChatListItem chatRoom={item}
-          keyExtractor={(item) => item.id}
+          keyExtractor={(item: { id: any; }) => item.id}
           /> }
           />
       </View>

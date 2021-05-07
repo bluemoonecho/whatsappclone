@@ -7,13 +7,14 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'space-between',
         padding: 10,
+        alignContent: 'flex-start',
     },
     leftContainer: {
         flexDirection: 'row',
     },
     midContainer: {
         justifyContent: 'space-around',
-        alignContent: 'flex-start',
+        
     },
     avatar: {
         width: 60,
